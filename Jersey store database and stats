@@ -1,0 +1,16 @@
+-- create a jersey store datebase 
+CREATE TABLE jersey_store (id INTEGER, item TEXT, quantity INTEGER, price INTEGER, description TEXT);
+
+INSERT INTO jersey_store VALUES (1,"Toronto Raptors", 10, 50, "Toronto Raptors Championship Jersey");
+INSERT INTO jersey_store VALUES (2,"Toronto Bluejays", 15, 40, "Toronto Bluejays home jersey");
+INSERT INTO jersey_store VALUES (3, "Toronto MapleLeafs", 12, 40, "Toronto Mapleleafs away jersey");
+INSERT INTO jersey_store VALUES (4, "Boston Celtics", 7, 55, "Boston Celtics 2022 home jersy"); 
+INSERT INTO jersey_store VALUES (5, "Houston Rockets", 20, 30, " 2006 Houston Rockets Jersey alternative look");
+INSERT INTO jersey_store VALUES (6, "Boston Redsocks", 4, 100, " 2018 Boston Redsocks limited edition");
+
+---------Sort by price-------------------------------------------
+SELECT * FROM jersey_store 
+ORDER BY price asc;
+
+------------TOTAL STOCK-----------------------------------------
+SELECT SUM(quantity) FROM jersey_store;
